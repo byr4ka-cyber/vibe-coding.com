@@ -214,6 +214,48 @@ h1 {
   background: rgba(148,163,184,0.08);
   color: #f8fafc;
 }
+.language {
+  margin-bottom: 64px;
+}
+.language h2 {
+  margin: 0 0 26px;
+  font-size: 2.2rem;
+}
+.language-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-bottom: 24px;
+}
+.language-card {
+  padding: 28px;
+  border-radius: 30px;
+  background: rgba(15,23,42,0.92);
+  border: 1px solid rgba(148,163,184,0.14);
+}
+.language-card h3 {
+  margin-top: 0;
+  font-size: 1.35rem;
+}
+.language-card p {
+  margin: 16px 0 0;
+  color: #cbd5e1;
+  line-height: 1.75;
+}
+.language-card pre {
+  margin: 16px 0 0;
+  padding: 18px 20px;
+  border-radius: 20px;
+  background: rgba(148,163,184,0.08);
+  overflow-x: auto;
+  color: #f8fafc;
+}
+.language-note {
+  margin: 0;
+  color: #cbd5e1;
+  font-size: 1rem;
+  line-height: 1.8;
+}
 .final-offer {
   padding: 44px 42px;
   border-radius: 36px;
@@ -224,7 +266,6 @@ h1 {
   justify-content: space-between;
   align-items: center;
   gap: 24px;
-}
 .final-offer h2 {
   margin: 0;
   font-size: 2rem;
