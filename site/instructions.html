@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Инструкция — ВАЙБ-КОДИНГ</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="hero instruction-hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Инструкция</p>
+        <h1>Как скачать и начать работать</h1>
+        <p class="lead">Выбери нужный раздел и получи пошаговую инструкцию для Windows, macOS, Linux и самого языка ВАЙБ.</p>
+        <div class="button-grid">
+          <a class="button primary" href="#win">1. Windows — как скачать</a>
+          <a class="button secondary" href="#mac">2. macOS — как скачать</a>
+          <a class="button secondary" href="#linux">3. Linux — как скачать</a>
+          <a class="button tertiary" href="#language">4. Как пользоваться языком</a>
+        </div>
+      </div>
+    </header>
+
+    <section id="win" class="info-section">
+      <h2>Windows — как скачать</h2>
+      <p>Нажми кнопку на главной странице или скачай прямо файл:</p>
+      <p><a class="button primary" href="installers/vibe-setup.exe">Скачать для Windows</a></p>
+      <p>После загрузки запусти установщик и следуй подсказкам. После установки открой терминал и введи:</p>
+      <code>vibe repl</code>
+      <p>Это запустит интерактивный режим, где можно сразу писать команды на языке ВАЙБ.</p>
+    </section>
+
+    <section id="mac" class="info-section">
+      <h2>macOS — как скачать</h2>
+      <p>Скачай файл:</p>
+      <p><a class="button secondary" href="installers/vibe-macos">Скачать для macOS</a></p>
+      <p>Затем открой Терминал и сделай файл исполняемым:</p>
+      <code>chmod +x vibe-macos</code>
+      <p>После этого запусти:</p>
+      <code>./vibe-macos repl</code>
+      <p>Теперь ты можешь писать команды напрямую в терминале.</p>
+    </section>
+
+    <section id="linux" class="info-section">
+      <h2>Linux — как скачать</h2>
+      <p>Скачай архив:</p>
+      <p><a class="button secondary" href="installers/vibe-linux.tar.gz">Скачать для Linux</a></p>
+      <p>Распакуй архив в терминале:</p>
+      <code>tar -xzf vibe-linux.tar.gz</code>
+      <p>Сделай файл исполняемым и запусти:</p>
+      <code>chmod +x vibe</code>
+      <code>./vibe repl</code>
+      <p>После этого ВАЙБ готов принимать команды.</p>
+    </section>
+
+    <section id="language" class="info-section">
+      <h2>Как пользоваться языком ВАЙБ</h2>
+      <p>Пиши запросы понятным текстом, и ВАЙБ преобразует их в рабочие команды и интерфейсы.</p>
+      <p>Примеры:</p>
+      <code>print Привет, мир!</code>
+      <code>set name to "Вайб"</code>
+      <code>if name contains Вайб then
+  print "Готово!"
+end</code>
+      <code>vibe create button "Нажми" with color blue
+on click show "Приветствие"</code>
+      <p>Начни с простого описания задачи, а затем усложняй сценарий шаг за шагом.</p>
+    </section>
+
+    <section class="final-offer">
+      <div>
+        <h2>Готов начать?</h2>
+        <p>Вернись на главную страницу, чтобы скачать нужную версию и сразу попробовать ВАЙБ.</p>
+        <a class="button primary" href="index.html">На главную</a>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
