@@ -68,6 +68,13 @@ h1 {
   font-weight: 700;
   font-size: 1rem;
 }
+.button-grid .button {
+  width: 100%;
+  justify-content: flex-start;
+  border-radius: 28px;
+  padding: 22px 24px;
+  min-width: auto;
+}
 .primary {
   background: linear-gradient(135deg, #6366f1, #2563eb);
   color: white;
