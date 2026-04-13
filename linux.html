@@ -16,14 +16,29 @@
       </div>
     </header>
     <section class="info-section">
-      <h2>Шаги для Linux</h2>
-      <ol>
-        <li>Скачай файл <strong>installers/vibe-linux.tar.gz</strong>.</li>
-        <li>Распакуй архив: <code>tar -xzf vibe-linux.tar.gz</code>.</li>
-        <li>Сделай бинарный файл исполняемым: <code>chmod +x vibe</code>.</li>
-        <li>Запусти: <code>./vibe repl</code>.</li>
-      </ol>
-      <p>После этого ВАЙБ будет готов к приёму команд на естественном языке.</p>
+      <h2>Шаг 1. Скачать архив</h2>
+      <p>Скачай файл <strong>installers/vibe-linux.tar.gz</strong>. Открой терминал и перейди в папку, где он оказался, например:</p>
+      <code>cd ~/Downloads</code>
+      <h2>Шаг 2. Распаковать</h2>
+      <p>Выполни команду:</p>
+      <code>tar -xzf vibe-linux.tar.gz</code>
+      <p>Если архив создаёт папку, проверь её командой <code>ls</code> и перейди внутрь:</p>
+      <code>cd имя_папки</code>
+      <h2>Шаг 3. Сделать исполняемым</h2>
+      <p>Убедись, что файл называется <strong>vibe</strong> или похожим именем, и установи права:</p>
+      <code>chmod +x ./vibe</code>
+      <h2>Шаг 4. Запустить</h2>
+      <p>Запусти программу:</p>
+      <code>./vibe repl</code>
+      <p>Если появится ошибка «Permission denied», повтори команду <code>chmod +x ./vibe</code> и попробуй снова.</p>
+      <h2>Шаг 5. Использовать командную строку</h2>
+      <p>Да, на Linux всё делается через консоль. После запуска REPL ты будешь вводить команды так:</p>
+      <code>print Привет, мир!</code>
+      <code>set name to "Вайб"</code>
+      <code>if name contains Вайб then
+  print "Готово!"
+end</code>
+      <p>Чтобы выйти из режима, нажми <strong>Ctrl+C</strong>.</p>
     </section>
     <section class="final-offer">
       <div>
