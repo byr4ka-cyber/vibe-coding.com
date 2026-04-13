@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Анти‑чит на ВАЙБ — ВАЙБ-КОДИНГ</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="hero instruction-hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Анти‑чит</p>
+        <h1>Как делать анти‑чит и защиту на ВАЙБ</h1>
+        <p class="lead">Анти‑чит — это часть большого проекта. Его логика должна работать отдельно и проверять поведение постоянно.</p>
+      </div>
+    </header>
+    <section class="info-section">
+      <h2>Что такое анти‑чит</h2>
+      <p>Анти‑чит следит за тем, чтобы программа или игрок не использовали запрещённые действия: слишком быструю скорость, запрещённые команды или неправильные данные.</p>
+      <p>Он работает как отдельный модуль, который наблюдает за основным приложением.</p>
+    </section>
+    <section class="info-section">
+      <h2>Как строится анти‑чит</h2>
+      <ul>
+        <li>Собирает данные о поведении.</li>
+        <li>Проверяет правила и ограничения.</li>
+        <li>Отправляет предупреждения или блокирует.</li>
+        <li>Логирует подозрительные события.</li>
+      </ul>
+      <h2>Пример проверки</h2>
+      <pre><code>set attempts to 0
+while true do
+  set speed to read speed value
+  if speed &gt; max_speed then
+    set attempts to attempts + 1
+  else
+    set attempts to 0
+  end
+  if attempts &gt; 3 then
+    block user
+    log "Чит обнаружен"
+  end
+end
+</code></pre>
+      <p>Такая проверка помогает находить повторяющиеся нарушения и реагировать на них.</p>
+    </section>
+    <section class="info-section">
+      <h2>Как интегрировать анти‑чит</h2>
+      <p>Анти‑чит должен быть отдельным модулем, чтобы его можно было включать, отключать и обновлять без изменения основной логики.</p>
+      <ul>
+        <li><code>anti_cheat.vibe</code> — правила и проверки.</li>
+        <li><code>game.vibe</code> — основная игра.</li>
+        <li><code>logger.vibe</code> — запись событий.</li>
+      </ul>
+      <p>При разделении модулей можно легко добавлять новые проверки и улучшать защиту.</p>
+    </section>
+    <section class="info-section">
+      <h2>Что важно помнить</h2>
+      <ul>
+        <li>Проверки должны быть понятными и надёжными.</li>
+        <li>Сначала тестируй, как анти‑чит ведёт себя на обычных действиях.</li>
+        <li>Не блокируй случайных пользователей — используй пороги и повторения.</li>
+      </ul>
+      <p>Анти‑чит — это не только защита, но и часть архитектуры большого проекта.</p>
+    </section>
+    <section class="final-offer">
+      <div>
+        <a class="button primary" href="language-large.html">Назад к крупным проектам</a>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

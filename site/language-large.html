@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Крупные проекты на ВАЙБ — ВАЙБ-КОДИНГ</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="hero instruction-hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Крупные проекты</p>
+        <h1>Как создавать большие проекты и ботов на ВАЙБ</h1>
+        <p class="lead">На ВАЙБ можно строить серьёзные приложения. Здесь объяснено, как разбить проект на части и создать Telegram‑бота.</p>
+      </div>
+    </header>
+
+    <section class="info-section">
+      <h2>Можно ли делать большие проекты?</h2>
+      <p>Да, можно. ВАЙБ подходит для крупных проектов, если разделить всё на модули и держать порядок в файлах.</p>
+      <h3>Как правильно разделять</h3>
+      <ul>
+        <li>UI — интерфейс, кнопки, меню.</li>
+        <li>Logic — обработка данных и правил.</li>
+        <li>Bot — связь с Telegram, API и внешними сервисами.</li>
+        <li>Anti-cheat — проверка и защита от читов.</li>
+      </ul>
+      <p>Такой подход помогает быстро менять одну часть, не ломая остальные.</p>
+      <div class="button-grid">
+        <a class="button primary" href="language-large-structure.html">Структура проекта</a>
+        <a class="button secondary" href="language-large-bots.html">Telegram‑боты</a>
+        <a class="button tertiary" href="language-large-anticheat.html">Анти‑чит</a>
+      </div>
+    </section>
+
+    <section class="info-section">
+      <h2>Пример структуры</h2>
+      <ul>
+        <li><code>main.vibe</code> — запуск и организация.</li>
+        <li><code>ui.vibe</code> — кнопки, меню, экраны.</li>
+        <li><code>logic.vibe</code> — правила, условия, вычисления.</li>
+        <li><code>bot.vibe</code> — Telegram и API.</li>
+      </ul>
+      <p>Такую структуру удобно расширять: добавил новый модуль — и проект сразу стал понятнее.</p>
+    </section>
+
+    <section class="info-section">
+      <h2>Как начинать большие проекты</h2>
+      <ol>
+        <li>Определи задачу: что должно работать.</li>
+        <li>Разбей проект на части, которые проще реализовывать.</li>
+        <li>Сначала сделай одну часть, проверь её, а затем добавляй следующую.</li>
+        <li>Пиши понятные имена и комментарии, чтобы легко возвращаться к проекту.</li>
+      </ol>
+      <h2>Пример: Telegram‑бот</h2>
+      <pre><code>set token to "ВАШ_ТОКЕН"
+set chat_id to "123456789"
+set text to "Привет! Это бот на ВАЙБ."
+http post "https://api.telegram.org/bot" + token + "/sendMessage" with json {
+  "chat_id": chat_id,
+  "text": text
+}
+</code></pre>
+      <p>Для большого бота добавляй обработку команд, состояния пользователей и разные ответы для разных ситуаций.</p>
+      <h2>Пример: анти‑чит</h2>
+      <pre><code>set attempts to 0
+while true do
+  check game data
+  if speed &gt; max_speed then
+    set attempts to attempts + 1
+  end
+  if attempts &gt; 3 then
+    block user
+  end
+end
+</code></pre>
+      <p>Анти‑чит проверяет действия и реагирует, если обнаруживает нарушения. Это ключевой компонент для крупных игровых или соревновательных систем.</p>
+    </section>
+
+    <section class="info-section">
+      <h2>Как обрабатывать команды</h2>
+      <p>Когда бот получает новое сообщение, он проверяет текст и выбирает ответ:</p>
+      <pre><code>set updates to http get "https://api.telegram.org/bot" + token + "/getUpdates"
+if updates contains "/start" then
+  http post "https://api.telegram.org/bot" + token + "/sendMessage" with json {
+    "chat_id": chat_id,
+    "text": "Добро пожаловать!"
+  }
+end
+</code></pre>
+    </section>
+
+    <section class="info-section">
+      <h2>Советы для больших проектов</h2>
+      <ul>
+        <li>Тестируй каждую часть отдельно.</li>
+        <li>Пиши понятные имена.</li>
+        <li>Сохраняй важное в отдельных файлах.</li>
+        <li>Не смешивай интерфейс с логикой.</li>
+      </ul>
+      <p>Даже очень большой проект может быть простым, если структура понятная и части хорошо разнесены.</p>
+    </section>
+
+    <section class="final-offer">
+      <div>
+        <a class="button primary" href="language.html">Назад к языку</a>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

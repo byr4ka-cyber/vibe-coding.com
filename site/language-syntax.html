@@ -17,26 +17,25 @@
     </header>
     <section class="info-section">
       <h2>Команда print</h2>
-      <p>Выводит текст или переменные в терминал.</p>
+      <p>Выводит текст или переменные на экран.</p>
       <pre><code>print Привет, мир!</code></pre>
-      <p>Можно выводить текст вместе с переменной:</p>
+      <p>Комбинируй текст и переменные:</p>
       <pre><code>set name to "Вайб"
 print Привет, name!</code></pre>
       <h2>Команда set</h2>
-      <p>Сохраняет значение в переменную. Она может быть строкой или числом.</p>
+      <p>Сохраняет значение в переменную.</p>
       <pre><code>set age to 18
 set city to "Москва"</code></pre>
       <h2>Условия if</h2>
-      <p>Исполняет блок команд, если условие истинно.</p>
-      <pre><code>if name contains Вайб then
-  print "Привет, Вайб!"
-end</code></pre>
-      <p>Можно использовать сравнение чисел:</p>
+      <p>Исполняет блок кода, когда условие истинно.</p>
       <pre><code>if age > 17 then
   print "Вход разрешён"
 end</code></pre>
-      <h2>Сравнение и логика</h2>
-      <p>Операторы сравнения помогают проверять значения:</p>
+      <p>Проверка текста:</p>
+      <pre><code>if city == "Москва" then
+  print "Столица"
+end</code></pre>
+      <h2>Операторы сравнения</h2>
       <ul>
         <li><code>==</code> — равно</li>
         <li><code>!=</code> — не равно</li>
@@ -44,23 +43,22 @@ end</code></pre>
         <li><code>&lt;</code> — меньше</li>
       </ul>
       <h2>Создание интерфейса</h2>
-      <p><code>vibe create</code> делит команды на элементы интерфейса.</p>
+      <p><code>vibe create</code> создаёт визуальные элементы.</p>
       <pre><code>vibe create button "Нажми" with color blue
 on click show "Приветствие"</code></pre>
-      <p>Кнопка создаётся первой строкой, а действие при клике — следующей.</p>
+      <p>Сначала задаётся элемент, потом — реакция на событие.</p>
       <h2>Структура блоков</h2>
-      <p>Блоки начинаются с условия <code>if</code> и заканчиваются <code>end</code>.</p>
-      <pre><code>if score > 10 then
-  print "Победа"
+      <p>Блоки начинаются с <code>if</code> и заканчиваются <code>end</code>.</p>
+      <pre><code>if score >= 100 then
+  print "Победа!"
 end</code></pre>
-      <h2>Создание функций</h2>
-      <p>Если доступна команда <code>define</code> или <code>function</code>, её используют для повторного кода. Например:</p>
+      <h2>Функции и повторение</h2>
+      <p>Если язык поддерживает функцию, она позволяет повторно использовать код.</p>
       <pre><code>define greet person
   print Привет, person!
 end
 
 greet "Маша"</code></pre>
-      <p>Это помогает не копировать одинаковые команды много раз.</p>
       <div class="button-grid">
         <a class="button primary" href="language-start.html">Основы</a>
         <a class="button secondary" href="language-examples.html">Примеры</a>

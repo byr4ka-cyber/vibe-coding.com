@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Telegram-боты на ВАЙБ — ВАЙБ-КОДИНГ</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="hero instruction-hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Telegram‑боты</p>
+        <h1>Как создавать большие Telegram‑боты на ВАЙБ</h1>
+        <p class="lead">Боты — хорошая задача для больших проектов. ВАЙБ может отправлять и получать сообщения, обрабатывать команды и держать состояние.</p>
+      </div>
+    </header>
+    <section class="info-section">
+      <h2>Что нужно для бота</h2>
+      <ol>
+        <li>Зарегистрируй бота у <strong>@BotFather</strong> и получи токен.</li>
+        <li>Сохрани токен в переменной, чтобы использовать его в запросах.</li>
+        <li>Напиши обработку команд и ответов.</li>
+        <li>Запусти бот на машине, которая может работать постоянно.</li>
+      </ol>
+      <h2>Пример отправки сообщения</h2>
+      <pre><code>set token to "ВАШ_ТОКЕН"
+set chat_id to "123456789"
+set text to "Привет! Это бот на ВАЙБ."
+http post "https://api.telegram.org/bot" + token + "/sendMessage" with json {
+  "chat_id": chat_id,
+  "text": text
+}
+</code></pre>
+      <p>Это базовый пример. Для настоящего бота нужно обрабатывать входящие сообщения.</p>
+    </section>
+    <section class="info-section">
+      <h2>Обработка команд</h2>
+      <p>Бот получает сообщения и выбирает, что ответить. Часто используются команды <code>/start</code>, <code>/help</code>, <code>/menu</code>.</p>
+      <pre><code>set updates to http get "https://api.telegram.org/bot" + token + "/getUpdates"
+if updates contains "/start" then
+  http post "https://api.telegram.org/bot" + token + "/sendMessage" with json {
+    "chat_id": chat_id,
+    "text": "Привет! Я готов помочь."
+  }
+end
+</code></pre>
+      <p>В реальном боте полезно сохранять состояние пользователя, чтобы отвечать по-разному.</p>
+    </section>
+    <section class="info-section">
+      <h2>Хранение состояния</h2>
+      <p>Большие боты не только отвечают, но и помнят, что делал пользователь.</p>
+      <pre><code>set user_state to {}
+set user_state[user_id] to "waiting_for_name"
+if updates contains "Привет" then
+  set user_state[user_id] to "menu"
+end
+</code></pre>
+      <p>Такую информацию удобно хранить в словаре или наборе переменных.</p>
+    </section>
+    <section class="info-section">
+      <h2>Как делить бот на части</h2>
+      <ul>
+        <li><strong>bot.vibe</strong> — отправка/приём сообщений.</li>
+        <li><strong>commands.vibe</strong> — обработка команд и сценариев.</li>
+        <li><strong>storage.vibe</strong> — состояние пользователей и настройки.</li>
+      </ul>
+      <p>Так бот остаётся удобным для расширения: добавил команду — и не тронул основную логику.</p>
+    </section>
+    <section class="final-offer">
+      <div>
+        <a class="button primary" href="language-large.html">Назад к крупным проектам</a>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Структура крупных проектов — ВАЙБ-КОДИНГ</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="hero instruction-hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Структура проекта</p>
+        <h1>Как строить большие проекты на ВАЙБ</h1>
+        <p class="lead">Разбивай проект на файлы и модули, чтобы он оставался понятным и удобным для правки.</p>
+      </div>
+    </header>
+    <section class="info-section">
+      <h2>Почему структура важна</h2>
+      <p>Когда проект становится большим, всё быстро усложняется. Если смешать интерфейс, логику и связь с сервисами в одном файле, его трудно поддерживать.</p>
+      <p>Поэтому лучше разделить проект на части: интерфейс, логику, внешний доступ и защиту.</p>
+      <h2>Типовая структура</h2>
+      <ul>
+        <li><code>main.vibe</code> — главный файл, который запускает приложение.</li>
+        <li><code>ui.vibe</code> — пользовательский интерфейс: кнопки, экраны, меню.</li>
+        <li><code>logic.vibe</code> — вычисления, правила, проверки.</li>
+        <li><code>bot.vibe</code> — работа с Telegram, API и сетевыми запросами.</li>
+        <li><code>anti_cheat.vibe</code> — правила и проверки для защиты от читов.</li>
+      </ul>
+      <h2>Как подключать части</h2>
+      <p>Если язык поддерживает импорт, используй его. Если нет, запускай файлы последовательно и передавай данные через переменные.</p>
+      <p>Например, <code>main.vibe</code> может сначала запустить <code>ui.vibe</code>, потом <code>logic.vibe</code>, а затем <code>bot.vibe</code>.</p>
+    </section>
+    <section class="info-section">
+      <h2>Пример главного файла</h2>
+      <pre><code>import ui.vibe
+import logic.vibe
+import bot.vibe
+
+start ui
+run logic
+start bot
+</code></pre>
+      <p>Если импорт невозможен, можно просто держать порядок запуска и общие переменные.</p>
+      <h2>Как хранить данные</h2>
+      <p>Для больших проектов удобно хранить данные в понятных переменных или структурах. Например, состояния пользователей и настройки можно положить в один файл.</p>
+      <pre><code>set settings to {
+  "max_speed": 300,
+  "bot_token": "ВАШ_ТОКЕН"
+}
+set user_state to {}
+</code></pre>
+      <h2>Проверяй каждый модуль</h2>
+      <p>Разделяй работу на модули, тестируй одно задание, затем переходи к следующему. Это позволит быстро найти и исправить ошибку.</p>
+    </section>
+    <section class="final-offer">
+      <div>
+        <a class="button primary" href="language-large.html">Назад к крупным проектам</a>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
