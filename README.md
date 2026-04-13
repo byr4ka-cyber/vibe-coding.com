@@ -90,11 +90,23 @@ npm run build:installers
 
 После этого в `dist/installers/` появятся:
 
+- `vibe-setup.exe` (Windows)
+- `vibe-macos` (macOS)
+- `vibe-linux` (Linux)
 - `vibe-windows.zip`
 - `vibe-macos.zip`
 - `vibe-linux.tar.gz`
 
-Для Linux распакуй и дай права:
+Для Windows запусти `vibe-setup.exe`.
+
+Для macOS:
+
+```bash
+chmod +x vibe-macos
+./vibe-macos
+```
+
+Для Linux:
 
 ```bash
 tar -xzf vibe-linux.tar.gz

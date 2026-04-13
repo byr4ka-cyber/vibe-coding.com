@@ -1,98 +1,97 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ВАЙБ-КОДИНГ</title>
+  <title>ВАЙБ-КОДИНГ | Язык на естественном языке</title>
   <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
   <div class="page">
     <header class="hero">
-      <div>
-        <p class="eyebrow">Новый язык для людей</p>
+      <div class="hero-copy">
+        <p class="eyebrow">Язык нового поколения</p>
         <h1>ВАЙБ-КОДИНГ</h1>
-        <p class="lead">Пиши команды как обычный текст, а система сама превращает их в рабочий код. Поддержка OpenAI и локального AI.</p>
-        <p class="lead secondary">Write commands like ordinary text and the system turns them into working code. Supports OpenAI and local AI.</p>
-        <p class="domain">Целевой домен проекта: <a href="https://vibecoding.ai">vibecoding.ai</a> (пример, пока не опубликован)</p>
+        <p class="lead">Пиши команды как обычный текст, а система превращает их в рабочий код, интерфейсы и сценарии. Быстро. Просто. С помощью AI.</p>
+        <p class="subtext">Вайб-Кодинг поддерживает русский и английский. Выбирай OpenAI или локальную модель и сразу запускай результат.</p>
         <div class="buttons">
-          <a class="button primary" href="installers/vibe-windows.zip">Windows‑установщик</a>
-          <a class="button secondary" href="installers/vibe-macos.zip">macOS</a>
+          <a class="button primary" href="installers/vibe-setup.exe">Скачать для Windows</a>
+          <a class="button secondary" href="installers/vibe-macos">macOS</a>
           <a class="button secondary" href="installers/vibe-linux.tar.gz">Linux</a>
-          <a class="button secondary" href="#howto">Инструкция</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>1 мин</strong><span>на установку</span></div>
+          <div><strong>0 строк</strong><span>кода перед стартом</span></div>
+          <div><strong>AI</strong><span>встроен сразу</span></div>
         </div>
       </div>
-      <pre class="code-block">print Привет, мир!
+      <div class="hero-panel">
+        <div class="panel-header">Пример скрипта</div>
+        <pre><code>print Привет, мир!
 set name to "Вайб"
-if name contains Вайб then print "Я тебя слышу"
-vibe create button "Нажми"
-</pre>
+if name contains Вайб then
+  print "Готово!"
+vibe create button "Нажми" with color blue
+on click show "Приветствие"</code></pre>
+      </div>
     </header>
 
-    <section class="downloads">
-      <h2>Установить на любую систему</h2>
-      <div class="buttons">
-        <a class="button primary" href="installers/vibe-windows.zip">Windows</a>
-        <a class="button secondary" href="installers/vibe-macos.zip">macOS</a>
-        <a class="button secondary" href="installers/vibe-linux.tar.gz">Linux</a>
+    <section class="highlights">
+      <article>
+        <h2>Интерактивные сценарии</h2>
+        <p>Собирай рабочие скрипты и интерфейсы без лишних команд. Вайб-Кодинг сам понимает, что ты хочешь сделать.</p>
+      </article>
+      <article>
+        <h2>Плавный AI-поток</h2>
+        <p>Задавай задачу, получай код, исправляй ошибки и дополняй через OpenAI или локальную модель.</p>
+      </article>
+      <article>
+        <h2>Быстрый старт</h2>
+        <p>Установи приложение и начинай писать сразу. Никаких тяжёлых настроек, только команды в терминале.</p>
+      </article>
+    </section>
+
+    <section class="showcase">
+      <div class="showcase-text">
+        <h2>Почему это интересно</h2>
+        <p>Вайб-Кодинг даёт тебе скорость и гибкость. Это инструмент, который превращает идею в рабочий код без ручного набора синтаксиса.</p>
       </div>
-      <p>Для Windows скачай ZIP с `vibe-setup.exe`. Для macOS: скачай ZIP и запусти `vibe-macos`. Для Linux: скачай tar.gz, распакуй и дай право на запуск.</p>
-    </section>
-
-    <section class="publishing">
-      <h2>Публикация сайта</h2>
-      <p>Чтобы сайт был доступен всем, размести папку <code>site/</code> на GitHub Pages, Netlify, Vercel или любом статическом хостинге.</p>
-      <ul>
-        <li>GitHub Pages: создай ветку <code>gh-pages</code> и выложи туда содержимое <code>site/</code>.</li>
-        <li>Netlify: просто перетащи папку <code>site/</code> на сайт или подключи репозиторий.</li>
-        <li>Vercel: укажи каталог <code>site</code> как статическую папку.</li>
+      <ul class="feature-list">
+        <li><strong>Задача вместо синтаксиса</strong> — опиши поведение, а не структуру.</li>
+        <li><strong>Прототипируй на лету</strong> — интерфейс и логика создаются из текста.</li>
+        <li><strong>AI работает вместе с тобой</strong> — исправляет, дополняет и предлагает идеи.</li>
+        <li><strong>Локальный режим</strong> — можно работать без интернета.</li>
       </ul>
-      <p>После публикации можно привязать домен и тогда любой сможет открыть сайт.</p>
     </section>
 
-    <section class="disclaimer">
-      <h2>Отказ ответственности / Disclaimer</h2>
-      <p>Мы не несем ответственности за использование этого проекта. This project is provided as-is; use at your own risk.</p>
-      <p>Сайт и установщики создаются для демонстрации идеи. We are not responsible for deployment or third-party hosting issues.</p>
-    </section>
-
-    <section class="features">
-      <article>
-        <h2>Естественный язык</h2>
-        <p>Пиши команды как обычный текст, без сложных скобок и объявлений типов.</p>
-      </article>
-      <article>
-        <h2>ИИ-провайдеры</h2>
-        <p>Работает с OpenAI и локальной моделью. Выбирай `openai` или `local`.</p>
-      </article>
-      <article>
-        <h2>Простой CLI</h2>
-        <p>Запускай `vibe` из терминала, пиши скрипты и тестируй интерактивно.</p>
-      </article>
-    </section>
-
-    <section class="howto" id="howto">
+    <section class="steps" id="howto">
       <h2>Как начать</h2>
-      <div class="cards">
-        <div class="card">
-          <h3>1. Скачай установщик</h3>
-          <code>Windows: vibe-windows.zip</code>
-          <code>macOS: vibe-macos.zip</code>
-          <code>Linux: vibe-linux.tar.gz</code>
+      <div class="step-grid">
+        <div class="step-card">
+          <h3>1. Скачай</h3>
+          <p><strong>Windows:</strong> vibe-setup.exe<br><strong>macOS:</strong> vibe-macos<br><strong>Linux:</strong> vibe-linux.tar.gz</p>
         </div>
-        <div class="card">
-          <h3>2. Запусти</h3>
-          <code>vibe repl</code>
+        <div class="step-card">
+          <h3>2. Установи</h3>
+          <p>Запусти файл, дай права на macOS/Linux и стартуй командой <code>vibe repl</code>.</p>
         </div>
-        <div class="card">
-          <h3>3. Экспериментируй</h3>
-          <code>vibe --ai-provider local examples/local-ai.vibe</code>
+        <div class="step-card">
+          <h3>3. Запусти</h3>
+          <p>Начни с простого: <code>vibe --ai-provider local examples/local-ai.vibe</code>.</p>
         </div>
+      </div>
+    </section>
+
+    <section class="final-offer">
+      <div>
+        <h2>Готов попробовать?</h2>
+        <p>Скачай ВАЙБ-КОДИНГ и начни создавать на естественном языке уже сегодня. Это быстрее, чем учить новый фреймворк.</p>
+        <a class="button primary" href="installers/vibe-setup.exe">Скачать сейчас</a>
       </div>
     </section>
 
     <footer>
-      <p>Сайт создан для проекта ВАЙБ-КОДИНГ. Код доступен в репозитории.</p>
+      <p>Сайт проекта ВАЙБ-КОДИНГ. Демонстрация новой идеи на границе языка и AI.</p>
     </footer>
   </div>
   <script src="./script.js"></script>
