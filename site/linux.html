@@ -16,14 +16,23 @@
       </div>
     </header>
     <section class="info-section">
-      <h2>Шаги для Linux</h2>
-      <ol>
-        <li>Скачай файл <strong>installers/vibe-linux.tar.gz</strong>.</li>
-        <li>Распакуй архив: <code>tar -xzf vibe-linux.tar.gz</code>.</li>
-        <li>Сделай файл исполняемым: <code>chmod +x vibe</code>.</li>
-        <li>Запусти: <code>./vibe repl</code>.</li>
-      </ol>
-      <p>После этого ВАЙБ будет готов к приёму команд на естественном языке.</p>
+      <h2>Шаг 1. Скачать архив</h2>
+      <p>Скачай файл <strong>installers/vibe-linux.tar.gz</strong> и открой терминал.</p>
+      <h2>Шаг 2. Распаковать</h2>
+      <p>Перейди в папку, где находится файл, например:</p>
+      <code>cd ~/Downloads</code>
+      <p>Распакуй архив:</p>
+      <code>tar -xzf vibe-linux.tar.gz</code>
+      <h2>Шаг 3. Сделать файл исполняемым</h2>
+      <p>Если после распаковки в текущей папке есть файл <strong>vibe</strong>, выполни:</p>
+      <code>chmod +x ./vibe</code>
+      <h2>Шаг 4. Запустить</h2>
+      <p>Запусти программу:</p>
+      <code>./vibe repl</code>
+      <p>Если архив распаковал папку, сначала перейди в неё: <code>cd имя_папки</code>.</p>
+      <h2>Что дальше</h2>
+      <p>Теперь ВАЙБ готов принимать команды. Пример:</p>
+      <code>print Привет, мир!</code>
     </section>
     <section class="final-offer">
       <div>
